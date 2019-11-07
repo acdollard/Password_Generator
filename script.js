@@ -1,4 +1,6 @@
 
+
+
 //possible character type combination arrays
 var specs = ["!", "@", "#", "$", "^", "&", "*", "(", ")", "~", ";", "/", "<", ">", "?", "+", "|"];
 var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -47,19 +49,30 @@ var askups = confirm("Do you want uppercase letters in your password?");
 var asklows = confirm("Do you want lowercase letters in your password?");
 
 //if statements linking user responses to appropriate string//
-var combo1 = function(){if(asknums === true && askspecs === true && askups === false && asklows === false)
-    {for (i=0; i < 17; i++){numsSpecs[Math.floor(Math.random() * numsSpecs.length)]}
+
+//test//
+var generate = function(){specs[Math.floor(Math.random() * specs.length)]}
+
+   console.log(generate)
+
+
+    //create empty array where the randomly generated characters will go
+  function generatePassword(){
+      let password = [""];
+      
+
+    //set iteration to the length specified by the user (example 17) 
+    for(let i=0; i < 17; i++){
+
+    //assign the character randomly generated to a var called 'element'
+    let element = (
+        specsNums[Math.floor(Math.random() * specsNums.length)]);
+
 }
-}
-console.log(combo1)
+    //push 'element' into the array 'password'
+    password.push(elements)
 
-
-//iterating function, using passLength as iterator limit and passCharacters, to pick random characters from appropriate array//
-
-//why can't I assign a variable to this? //why won't it iterate? //how do I invoke it? 
-for (i=0; i < 17; i++){
-    var characters = specs[Math.floor(Math.random() * specs.length)];
-    }
+     
 
 
 
@@ -73,7 +86,3 @@ for (i=0; i < 17; i++){
 
 //return string to screen// 
 
-var combo2 = function () {if(1>0) {for(i=0; i < 17; i++){numsUps[Math.floor(Math.random() * numsUps.length)]}}
-
-}
-console.log(combo2)
