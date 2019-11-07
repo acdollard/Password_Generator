@@ -53,7 +53,7 @@ var asklows = confirm("Do you want lowercase letters in your password?");
 //test//
    function GeneratePassword(){
         let password = "";
-        for(let i=0; i<17; i++){
+        for(let i=0; i<length; i++){
         password = password + specs[Math.floor(Math.random() * specs.length)];
         };
         return password;
