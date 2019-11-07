@@ -81,8 +81,7 @@ if(asknums == true && askspecs == false && askups == false && asklows == false){
     appropriateArray = numbsSpecsUpsLows
 }
 
-
-//test//
+//function picking random element from appropriate string and iterating ## according to length prompt; random string is generated// 
    function GeneratePassword(){
         let password = "";
         for(let i=0; i<length; i++){
@@ -95,3 +94,10 @@ let NewPassword = GeneratePassword()
 
 
 document.getElementById("yourPassword").textContent = NewPassword
+
+function myFunction(){
+    var copyText = document.getElementById("yourPassword")
+    copyText.select();
+    document.execCommand("copy");
+    alert("Copied!");
+}
