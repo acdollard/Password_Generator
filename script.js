@@ -51,28 +51,17 @@ var asklows = confirm("Do you want lowercase letters in your password?");
 //if statements linking user responses to appropriate string//
 
 //test//
-var generate = function(){specs[Math.floor(Math.random() * specs.length)]}
+   function GeneratePassword(){
+        let password = "";
+        for(let i=0; i<17; i++){
+        password = password + specs[Math.floor(Math.random() * specs.length)];
+        };
+        return password;
+    }
+        
+    console.log(GeneratePassword())
 
-   console.log(generate)
 
-
-    //create empty array where the randomly generated characters will go
-  function generatePassword(){
-      let password = [""];
-      
-
-    //set iteration to the length specified by the user (example 17) 
-    for(let i=0; i < 17; i++){
-
-    //assign the character randomly generated to a var called 'element'
-    let element = (
-        specsNums[Math.floor(Math.random() * specsNums.length)]);
-
-}
-    //push 'element' into the array 'password'
-    password.push(elements)
-
-     
 
 
 
@@ -84,5 +73,4 @@ var generate = function(){specs[Math.floor(Math.random() * specs.length)]}
 
 
 
-//return string to screen// 
-
+//return string to screen//
