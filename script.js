@@ -90,19 +90,8 @@ if(asknums == true && askspecs == false && askups == false && asklows == false){
         };
         return password;
     }
-        
-    console.log(GeneratePassword())
+
+let NewPassword = GeneratePassword()
 
 
-
-
-
-//push resulting characters from function into array//
-
-
-
-//join resulting array into a string//
-
-
-
-//return string to screen//
+document.getElementById("yourPassword").textContent = NewPassword
