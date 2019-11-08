@@ -83,22 +83,16 @@ if(asknums == true && askspecs == false && askups == false && asklows == false){
 }
 
 //function picking random element from appropriate string and iterating ## according to length prompt; random string is generated// 
-   function GeneratePassword(){
+function GeneratePassword(){
         let password = "";
         for(let i=0; i<length; i++){
         password = password + appropriateArray[Math.floor(Math.random() * appropriateArray.length)];
         };
-        return password;
-    }
+        return password;}
+    
 
 let NewPassword = GeneratePassword()
 
+document.getElementById("textArea").textContent = NewPassword
 
-document.getElementById("yourPassword").textContent = NewPassword
 
-function myFunction(){
-    var copyText = document.getElementById("yourPassword")
-    copyText.select();
-    document.execCommand("copy");
-    alert("Copied!");
-}
