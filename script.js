@@ -1,6 +1,4 @@
 
-
-
 //possible character type combination arrays
 var specs = ["!", "@", "#", "$", "^", "&", "*", "(", ")", "~", ";", "/", "<", ">", "?", "+", "|"];
 var nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -38,9 +36,12 @@ var numbsSpecsUpsLows = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
 
 
 //prompt asking the user how many characters 8-28, assigning each response to  var//
-var length = prompt("How many characters long would you like your password to be? (must be a number between 8-28");
+var length = prompt("How many characters long would you like your password to be? Must be a number between 8-128");
 
-
+while(length < 8 || length > 128 || isNaN(length)){
+    alert("Must be a number between 8-128!");
+    length = prompt("How many characters long would you like your password to be? Must be a number between 8-28");
+    }
 
 //set of confirms asking user to confirm which types of characters they want used, assigning each possible response combo to a var//
 var asknums = confirm("Do you want numbers in your password?");
