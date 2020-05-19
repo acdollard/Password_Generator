@@ -36,27 +36,23 @@ if(asklows){
     characters = characters + lows
 }
 console.log(characters);
+newArray = characters.split(",")
+
+console.log(newArray)
 
 //function picking random element from appropriate string and iterating ## according to length prompt; random string is generated// 
 function GeneratePassword(){
-        let password = "";
+        let password = [];
         for(let i=0; i<length; i++){
-        password = password + characters[Math.floor(Math.random() * characters.length)];
+        password.push(characters[Math.floor(Math.random() * newArray.length)]);
         };
-        return password;}
+        return password.join("");}
     
 
 let NewPassword = GeneratePassword()
 
 document.getElementById("textArea").textContent = NewPassword
 
-
-
-function MakePassword() {
-
-
-
-}
 
 
 
