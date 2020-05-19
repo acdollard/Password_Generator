@@ -46,34 +46,26 @@ var askspecs = confirm("Do you want special characters in your password?");
 var askups = confirm("Do you want uppercase letters in your password?");
 var asklows = confirm("Do you want lowercase letters in your password?");
 
-//if statements linking user responses to appropriate string//
-var combo1 = function(){if(asknums === true && askspecs === true && askups === false && asklows === false)
-    {for (i=0; i < 17; i++){numsSpecs[Math.floor(Math.random() * numsSpecs.length)]}
+let characters =[];
+
+if(asknums){
+    characters = characters + nums
+} else if(askspecs){
+    characters = characters + specs
+} else if(askups){
+    characters = characters + ups
+} else if(asklows){
+    characters = characters + lows
 }
-}
-console.log(combo1)
 
+console.log(characters);
 
-//iterating function, using passLength as iterator limit and passCharacters, to pick random characters from appropriate array//
+function createPassword() {
+    let password = "";
+    for(let i=0; i<length; i++){
 
-//why can't I assign a variable to this? //why won't it iterate? //how do I invoke it? 
-for (i=0; i < 17; i++){
-    var characters = specs[Math.floor(Math.random() * specs.length)];
+        password = password + password[Math.floor(Math.random() * length)]
     }
-
-
-
-//push resulting characters from function into array//
-
-
-
-//join resulting array into a string//
-
-
-
-//return string to screen// 
-
-var combo2 = function () {if(1>0) {for(i=0; i < 17; i++){numsUps[Math.floor(Math.random() * numsUps.length)]}}
-
+    console.log(password)
+    return password
 }
-console.log(combo2)
